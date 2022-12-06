@@ -34,9 +34,11 @@ function App() {
   }
 
   const handleRemoveRepo = (id) => {
-    console.log('Removendo registro', id);
-
-    // utilizar filter.
+    console.log(id)
+    console.log(repos)
+    const repoai =repos.filter(repo => repo.id === id)
+    repos.splice(repos.indexOf(repoai))
+    console.log(repos.indexOf(repos.filter(repo => repo.id === id)))
   }
 
 
